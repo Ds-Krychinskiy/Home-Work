@@ -1,7 +1,6 @@
-import React, { ButtonHTMLAttributes } from "react";
 import styled from "styled-components";
 
-const ButtonWrapper = styled.button`
+export const ButtonStyle = styled.button`
   background-color: #5c98f1;
   width: 233px;
   height: 56px;
@@ -9,6 +8,7 @@ const ButtonWrapper = styled.button`
   border: 0;
   transition: 0.35s;
   cursor: pointer;
+  margin-top: 48px;
   :hover {
     background-color: #4583de;
   }
@@ -20,8 +20,7 @@ const ButtonWrapper = styled.button`
     cursor: default;
   }
 `;
-
-const Text = styled.span`
+export const Text = styled.span`
   color: #ffffff;
   font-family: Montserrat;
   font-style: normal;
@@ -29,16 +28,3 @@ const Text = styled.span`
   font-size: 15px;
   line-height: 23px;
 `;
-
-interface IButtonProps {
-  className?: string;
-}
-const Button: React.FC<ButtonHTMLAttributes<HTMLButtonElement> & IButtonProps> =
-  ({ ...props }) => {
-    return (
-      <ButtonWrapper {...props}>
-        <Text>Log in</Text>
-      </ButtonWrapper>
-    );
-  };
-export default Button;
