@@ -5,7 +5,7 @@ import { ReactComponent as Logo } from "../../../images/logo.svg";
 export const HeaderStyle = styled.div`
   display: flex;
   justify-content: space-between;
-  max-height: 80px;
+  max-height: 79px;
   height: 100%;
   width: 100%;
   border-bottom: 1px solid #5c98f1;

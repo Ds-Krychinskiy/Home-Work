@@ -5,5 +5,8 @@ export const ChattyStyle = styled.div`
   width: 100%;
   max-height: 1080px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+
   border: 1px solid #5c98f1;
 `;

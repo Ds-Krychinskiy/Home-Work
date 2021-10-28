@@ -18,7 +18,8 @@ const FormAutorize = () => {
   };
 
   const disabled = !(userName.length > 2 && password.length > 2);
-
+  const disabledInputName = userName.length <= 0 || userName.length >= 2;
+  const disabledInputPassword = password.length <= 0 || password.length >= 2;
   const history = useHistory();
 
   const registration = () => {
@@ -41,7 +42,8 @@ const FormAutorize = () => {
         name={"User name"}
         placeholder={"Input user name"}
         type={"text"}
-        error={"Something goes wrong"}
+        message={false}
+        error={disabledInputName}
       />
       <Inputs
         value={password}
@@ -49,7 +51,8 @@ const FormAutorize = () => {
         name={"Password"}
         placeholder={"Input password"}
         type={"password"}
-        error={"Something goes wrong"}
+        message={false}
+        error={disabledInputPassword}
       />
       <Button onClick={registration} disabled={disabled}>
         Log in

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ReactComponent as ErrorIcon } from "../../../images/ErrorIcon.svg";
 
-export const InputStyle = styled.input<{ hasError: boolean }>`
+export const InputStyle = styled.input<{ hasError: boolean; message: boolean }>`
   padding-left: 16px;
   outline: none;
   border: ${(props) =>
@@ -9,9 +9,9 @@ export const InputStyle = styled.input<{ hasError: boolean }>`
   box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid #b3cdf8;
-  width: 354px;
-  height: 56px;
-  margin-bottom: 25px;
+  width: ${(props) => (props.message ? 950 : 354)}px;
+  height: ${(props) => (props.message ? 80 : 56)}px;
+  margin-bottom: ${(props) => (props.hasError ? 4 : 25)}px;
   ::placeholder {
     font-family: Montserrat;
     font-style: normal;

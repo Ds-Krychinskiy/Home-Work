@@ -35,3 +35,19 @@ export const H4 = styled.h4<{ size: Size }>`
   margin-top: 4px;
   margin-bottom: 4px;
 `;
+
+export const Body = styled.span<{ size: Size }>`
+  font-size: ${(props) => (props.size === "big" ? 14 : 13)}px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  color: #5e93e7;
+`;
+
+export const Body2 = styled.div<{ size: Size }>`
+  font-size: ${(props) => (props.size === "big" ? 16 : 13)}px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+`;
